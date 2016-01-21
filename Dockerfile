@@ -25,3 +25,9 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
 
 COPY go-wrapper /usr/local/bin/
+
+RUN go get github.com/eeue56/caching-layer
+RUN go install github.com/eeue56/caching-layer
+ENTRYPOINT /go/bin/caching-layer
+
+EXPOSE 8001
