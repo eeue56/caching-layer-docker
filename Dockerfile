@@ -30,4 +30,4 @@ RUN go get github.com/eeue56/caching-layer
 RUN go install github.com/eeue56/caching-layer
 ENTRYPOINT /go/bin/caching-layer
 
-EXPOSE 8001
+EXPOSE 80
